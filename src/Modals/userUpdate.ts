@@ -1,3 +1,3 @@
 export interface Update{
-  userName: string;
+  username: string;
 }

@@ -19,7 +19,6 @@ export class ViewPage {
   }
 
   ionViewDidLoad() {
-    console.log('ionViewDidLoad ViewPage');
   }
 
 }

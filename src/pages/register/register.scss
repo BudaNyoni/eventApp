@@ -6,12 +6,12 @@ page-register {
        background-repeat: no-repeat;
        background-position: center;
     }
-
+ 
     .list{
         margin-top: 40%;
       
     }
-
+ 
     .button{
         margin-top: 5%;
         width: 90%;
@@ -22,7 +22,7 @@ page-register {
         border-radius: 50px;
         // background-color: aliceblue;
     }
-
+ 
     .item{
         background-color: rgba(255, 255, 255, 0.171);
         border-radius: 50px;
@@ -38,27 +38,32 @@ page-register {
             color: aliceblue;
         }
     }
-
+ 
     h1{
         color: white;
-        font-size: 3em;
+        font-size: 3.3em;
         font-weight: 100;
         position: relative;
         top: 20%;
         text-align: center;
     }
-
+ 
     .image{
         position: relative;
         top: 80px;
     }
-
+ 
     p{
         color: white;
         font-weight: 100;
         position: relative;
         text-align: center;
-
+ 
+    }
+ 
+    .ico{
+        color: white;
+        font-size: 3em;
     }
 
    

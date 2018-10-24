@@ -1,19 +1,18 @@
 <ion-header>
 
     <ion-navbar color="nav">
-        <ion-title>Comments</ion-title>
+        <ion-title align="center">Comments</ion-title>
       </ion-navbar>
     </ion-header>
     
-    <ion-content class="all">
+    <ion-content class="all" padding>
     <ion-list class="com" *ngFor="let i of comments">
-      <div class="cm">
-    
-      <ion-item>
+      <div>
+          <ion-item>
         <ion-avatar item-start>
           <img src="{{i.img}}">
         </ion-avatar>
-        <h1 capitalize>
+        <h1 capitalize class="naam">
           <b>{{i.name}}</b>
           <span class="date" align="right">{{i.date}}</span>
         </h1>
@@ -24,7 +23,6 @@
           </div>
       </div>
      </ion-item>
-
     </div>
     </ion-list>
     
@@ -33,15 +31,19 @@
     
     <ion-footer>
      <ion-toolbar class="tool">
-    <ion-textarea textwrap maxlength="50" placeholder="Comment here..." class="comments" [(ngModel)]="newmessage"></ion-textarea>
-     <!-- <ion-buttons ion-fab mini end round color="nav" >
-        <button ion-button   class ="send" icon-only (click)="placeComment()"><ion-icon name="md-send"></ion-icon></button>
-      </ion-buttons>  -->
-      <ion-buttons end  class="send" (click)="placeComment()">
-      <button color="nav" ion-fab mini end icon-only><ion-icon name="md-send"></ion-icon></button>
-    </ion-buttons>
+       <ion-grid>
+       <ion-row>
+         <ion-col>
+     <ion-textarea textwrap maxlength="50" placeholder="Comment here..." class="comments" [(ngModel)]="newmessage"></ion-textarea>       
+         </ion-col>
+
+         <ion-col>
+        <button ion-button color="nav" item-end icon-only class="send" (click)="placeComment()">
+        <ion-icon name="md-send"></ion-icon>
+       </button>     
+         </ion-col>
+       </ion-row>
+      </ion-grid>
     </ion-toolbar>
     </ion-footer>
-    <!-- <ion-buttons end round ">
-        <button ion-button color="nav"  icon-only><ion-icon name="md-send"></ion-icon></button>
-      </ion-buttons>  -->
+

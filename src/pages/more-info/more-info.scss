@@ -1,119 +1,145 @@
 page-more-info {
-    .top{
-        //background-image:linear-gradient(rgba(0, 0, 0, 0.384)), url('../../assets/65c8306ec56121463aa4f089845408a3.jpg');
-        background-attachment: fixed;
-        background-size: cover;
-        // background-position: center;
-        height: 50vh;
+
+    .contents{
+        height: 30rem;
+        .navrow{
+            display: flex;
+            flex-flow: row nowrap;
+            justify-content: space-between;
+        }
+        .headings{
+            margin-top: 5em;
+            margin-left:1em;
+            text-transform: capitalize;
+            color: white;
+            .heading{
+                letter-spacing: .1em;
+                font-size: 2.3em;
+            }
+        }
+
     }
-    .dash{
-        position: relative;
-        margin-top: 65%;
-        background-image:linear-gradient(rgba(0,0,0,0.5),#7a4579), url('../../assets/imgs/people.jpg');
-// opacity: 0.90;
-    //    background:linear-gradient(rgba(231, 227, 227, 0),rgba(87, 2, 95, 0.322),#7b298a);
-    //    background-color: #d33e55;
+
+    .menu{
+        height: 4em;
+        display: flex;
+        flex-flow: row nowrap;
+        justify-content: space-between;
+        box-shadow: 2px 5px 6px rgba(grey, .6);
+        border-bottom-left-radius: .5em;
+        border-bottom-right-radius: .5em;
+        background-image:linear-gradient(360deg,#7a4579,rgba(0,0,0,0.5)), url('../../assets/imgs/people.jpg');
+        img{
+            height: 7em;
+            width: 7em;
+            border-radius: 50%;
+            border: 3px solid white;
+            position: relative;
+            left: 1em;
+            top: 1.5em;
+            box-shadow: 2px 5px 6px rgba(grey, .6);
+        }
+
+        .i{
+            display: block;
+            padding: .68em;
+            color: white;
+            &:last-child{
+                margin-right: 1em;
+            }
+            
+            
+        }
+
     }
-    .i{
-        color:whitesmoke;
-        font-size: 250%;
-        z-index: 1;
-        margin-left: 70px;
-    }
-    h3{
-        color: whitesmoke;
-       
-        // margin-top: 20px;
-        // position: absolute;
+
+    .posted{
+        margin-left: 8.5em;
+        font-weight: bold;
+        font-size: 1em;
+        box-shadow: none;
+        position: fixed;
+        display: block;
+        background: white;
+        width: 100vw;
     }
     .back{
-        font-size: 250%;
-        color:whitesmoke;
-        margin-left: 10px;
+        color: whitesmoke;
     }
-    .ii{
-        font-size: 160%;
-        // font-weight: bold;
-        // font-family: Arial;
+
+    ion-content{
+        margin-top: 5em;
+        z-index: -999;
     }
-    .if{
-        font-size: 35px;
+
+    .item{
+        height: 4em;
     }
-    .head{
-        color: white;
-        position: absolute;
-        margin-left: 10px;
-        margin-top: 10px;
-        text-shadow: 4px 8px 2px black;
-        text-transform: capitalize;
-    }
-    .pic{
-        
-        // padding: 5px;
-        height: 100px;
-        width: 100px;
-        border-radius: 80px;
-     
-        // overflow: hidden;
-        // z-index: 1;
-    }
-    ion-fab.fabi{
-        top: 260px;
-    }
-    .lab{
-    position: absolute;
-    margin-left: 110px;
-    color: whitesmoke;
-    }
-    // button.faba{
-    //     // box-shadow: 1px 3px 3px 2px black;
+    // .i{
+    //     box-shadow: 2px 2px 4px black;
+    //     background-color: none
     // }
-    
-    // .add{
-    //     font-size: 180px;
+
+    // ion-fab.fabi{
+    //     top: 260px;
     // }
-    .colo{
-        padding-left: 30px;
-        padding-right: 30px;
-    }
-    .phot{
-        border-radius: 80px;
-        background-color: white;
-        top: 93%;
-        padding: 5px;
-        position: absolute;
-        margin-left: 10px;
-        // box-shadow: 1px 1px 2px;
-        z-index: 1;
-        // margin-bottom: 20px;
-        // position: relative;
-    }
-    .title{
-        margin-left: 120px;
-        position: absolute;
-        // color: whitesmoke;
-        top: 105%;
-    }
+    // .lab{
+    // position: absolute;
+    // margin-left: 150px;
+    // color: whitesmoke;
+    // }
+    // .colo{
+    //     padding-left: 30px;
+    //     padding-right: 30px;
+    // }
+   
+    // .phot{
+    //     border-radius: 80px;
+    //     background-color: white;
+    //     top: 93%;
+    //     padding: 5px;
+    //     position: absolute;
+    //     margin-left: 10px;
+    //     z-index: 1;
+    // }
+    // .title{
+    //     margin-left: 120px;
+    //     position: absolute;
+    //     top: 105%;
+    // }
     .ic{
         font-size: 180%;
-        margin-top: 25%;
+        margin-top: .6em;
+       
     }
-    p{
-        font-size: 90%;
+
+    ion-thumbnail{
+        margin: 0 !important;
+    }
+    // p{
+    //     font-size: 90%;
        
     
-    }
+    // }
     
-    .p{
-        font-size: 1.3em;
-        text-transform: capitalize;
+    // .p{
+    //     font-size: 1.3em;
+    //     text-transform: capitalize;
         
-    }
-    .dash{
-        position: absolute; 
+    // }
+    // .dash{
+    //     position: absolute; 
       
-    }
-    .content{
-        margin-top: 38px;
+    // }
+    // .content{
+    //     margin-top: 38px;
+    // }
+    .ii{
+        display: block;
+        padding: .68em;
+        // color: white;
+        &:last-child{
+            margin-right: 1em;
+        }
     }
     }

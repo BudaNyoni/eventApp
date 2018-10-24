@@ -5,7 +5,6 @@ import { SplashScreen } from '@ionic-native/splash-screen';
 import { TabsPage } from '../pages/tabs/tabs';
 import { CommentsPage } from '../pages/comments/comments';
 import { HomePage } from '../pages/home/home';
-
 import { ContactPage } from '../pages/contact/contact';
 import { RegisterPage } from '../pages/register/register';
 import {LoginPage} from '../pages/login/login';
@@ -13,13 +12,15 @@ import { MoreInfoPage } from '../pages/more-info/more-info';
 import {FirebaseConnectionProvider} from '../providers/firebase-connection/firebase-connection'
 import { LocalNotifications } from '@ionic-native/local-notifications';
 import { removeDebugNodeFromIndex } from '@angular/core/src/debug/debug_node';
+import { TestPage } from '../pages/test/test';
 
 @Component({
  templateUrl: 'app.html'
 })
 export class MyApp {
 
-public rootPage:any ;
+
+ rootPage:any = TabsPage;
 newEvents =  new Array();
 
 
@@ -31,17 +32,7 @@ newEvents =  new Array();
      statusBar.styleDefault();
 
      splashScreen.hide();
-     fire.getUserSatate().then( data =>{
-       this.pushNotification();
-    if (data == 1){
-     this.rootPage =  TabsPage;
-     fire.getuser();
-    }
-    else{
-      this.rootPage = LoginPage;
-    }
-     })
-
+     this.pushNotification();
    });
  }
 
@@ -52,18 +43,13 @@ newEvents =  new Array();
        this.localNotifications.schedule({
          id : 1,
          title: 'New Event added by \n',
-         text: this.newEvents[0].name + ', are you going?',
+         text: this.newEvents[0].name + ' called ' + this.newEvents[0].eventName,
          vibrate: true,
          foreground: true,
          icon  :'https://firebasestorage.googleapis.com/v0/b/eventapp-a1624.appspot.com/o/fireworks%20(1).png?alt=media&token=6dee6a87-300e-4477-95f8-6d42b53ad9f5https://firebasestorage.googleapis.com/v0/b/eventapp-a1624.appspot.com/o/fireworks%20(1).png?alt=media&token=6dee6a87-300e-4477-95f8-6d42b53ad9f5',
-         actions: [
-           { id: 'yes', title: 'Yes' },
-           { id: 'no',  title: 'No' }
-       ],
          trigger: {at: new Date(new Date().getTime() + 5 * 1000)},
       });
      }
    })
  }
 }
-

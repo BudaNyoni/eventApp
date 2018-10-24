@@ -1,20 +1,24 @@
 page-comments {
-    .all{background-color: #fcedef;}
+
+    .all{
+        background-color: #f3e8f3;
+    // margin-top: 2px;
+    // padding-left: 2px;
+    // padding-right: 2px;
+    // padding-bottom: 2px;
+    }
     
     .comments{
 
         // position: fixed;
         // bottom: 1vh;
-        width: 98%;
+        width: 170%;
         height:50px;  
         border: 2px solid #7a4579;
         border-radius: 10px;
-        // padding-left: 2px;
-        // padding-right: 2px;
+        padding-left: 8px;
         padding-top: 2px;
-        // padding-bottom: 2%;
-
-        font-size: 14px;
+        font-size: 10px;
         // margin-left: 8px;
         // margin-bottom: 10px;
     }
@@ -22,14 +26,15 @@ page-comments {
     .tool{
         height: 10vh;
     }
-    .cm{
-        min-height:70px;
+    .com{
+        min-height:50px;
         //  width: 100%;
         // border: 2px solid #db3951;
         border-radius: 15px;
-        // margin-top: 20px; 
+        margin-bottom: 8px; 
 
-    }.item{
+    }
+    .item{
         // bottom: 10px;
         box-shadow: 2px 2px 4px;
 
@@ -37,28 +42,36 @@ page-comments {
     .send{
     // position: fixed;
     height: 50px;
-    width: 55px;
-    //  margin-right: 25px;
-    border-radius: 50px;
+    width: 50px;
+    margin-right: 5px;
+    border-radius: 30px;
+    // padding-bottom: 2px;
     // border: 2px solid #db3951;
+    float: right;
+    // margin-bottom: 10px;
+    bottom: 5px;
     }
     .date{
     font-weight: 30;
+    font-size: 11px;
     }
 
     .downer{
         height: 8%;
          margin-top: 2px;
     }
+
     .text{
         margin-left: 2px;
         // position: relative;
-        
+        font-size: 11px;
     }
    
     span { float: right; 
     font-size: 14px;
     padding-top:5px;
     }
-
+.naam{
+    font-size: 18px;
+}
  }
