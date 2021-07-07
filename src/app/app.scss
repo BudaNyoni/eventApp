@@ -14,3 +14,12 @@
 // To declare rules for a specific mode, create a child rule
 // for the .md, .ios, or .wp mode classes. The mode class is
 // automatically applied to the <body> element in the app.
+*{
+    font-family: 'Roboto', sans-serif;
+}
+.toast1{.toast-wrapper { 
+    text-align: center;  background: color($colors,  toast2);
+}}
+.toast2{.toast-wrapper { 
+    text-align: center;  background: color($colors,  toast1);
+}}

@@ -1,171 +1,54 @@
-    <ion-toolbar color="nav">
-      <ion-title>Upcoming Events</ion-title>
-    </ion-toolbar>
+<ion-header>
+  <ion-toolbar color="nav">
+    <ion-title align="center"> Events</ion-title>
+  </ion-toolbar>
+</ion-header>
 
-   
-    <ion-content padding class="card-background-page">
+<ion-content>
 
-      <!-- <ion-card class="card" *ngFor="let a of fetching;let i of index;">
-          <ion-card-header class="head" style="text-align: center">
-              {{i.eventName}}
-            </ion-card-header>
-        <img class="image" src="{{i.img}}">
-        <ion-card-content>
-          <ion-card-title>
-            <p style="display:block;text-overflow: ellipsis;width: 355px;overflow: hidden; white-space: nowrap;" ><b>{{a.eventDesc}}</b></p>
-            </ion-card-title>
-          <p>  <ion-icon ios="ios-pin" md="md-pin"></ion-icon>
-   
-            {{a.location}}
-          </p>
-          <br>
-         <div align="left">
-          <button ion-button color="butt" (click)="viewMore(i)" outline>View more</button>
-   
+
+
+ <h1><b>Upcoming events</b></h1>
+ <div class="shade">
+   <span ></span>
+ </div>
+
+<div class="scrollcontainer">
+      <div class="cardcontainer" *ngFor="let a of fetchingUpcoming;let i of index;">
+        <div class="image">
+          <img class="image" src="{{a.img}}" imageViewer />
         </div>
-          <h2 align="right">{{i.date}}</h2>
-   
-        </ion-card-content>
-      </ion-card> -->
-    
-<h1>Upcoming</h1>
-<h2 class="h2" (click)="viewAll()">View all</h2>
+        <div class="content">
+          <p class="texts" text-wrap>{{i.eventName}}</p>
+          <p class="text" (click)="viewMore(i)">View
+          </p>
+        </div>
+      </div>
+    </div>
 
-      <ion-slides  class="main"  >
-          <ion-slide class="slide1" >
-              <div *ngFor="let a of fetching2;let i of index;" class="main">
-                    
-                  <ion-card  (click)="viewMore(i)">
-                      <img src="{{i.img}}"/>
-                      <!-- <div class="card-title">{{i.eventName}}</div>
-                      <div class="card-subtitle">{{a.location}}</div> -->
-                    </ion-card>
-              <!-- <ion-card>
-                  <img class="image" src="{{i.img}}"/> -->
-                  <!-- <ion-card-content>
-                  <p style="color: black; font-weight: 500; padding-left: 10px">Color Fest</p>
-                  <div align="left">
-                  <p style="padding-left:10px"><ion-icon class="icon" name="pin"></ion-icon>&emsp;Braamfontein, No.1 Fox Str</p>
-                  </div>
-                   <p style="padding-left:10px"><ion-icon name="md-clock"></ion-icon>&emsp;31 Dec 2018 - 2 PM</p>
-                 </ion-card-content> -->
-                <!-- </ion-card> -->
+    <h1>Recently Added</h1>
+
+    <ion-slides class="main" slidesPerView="2">
+      <div *ngFor="let a of fetchingRecentlyAdded;let i of index;" class="main">
+        <ion-slide class="slide1">
+          <ion-card class="carrd">
+            <img class="image" src="{{a.img}}" imageViewer />
+            <!-- <ion-card-content class="cont" (click)="viewMore(i)">
+              <p>{{i.eventName}}</p>
+              <div align="left">
+                <p style="color: rgb(139, 82, 139)">View more</p>
               </div>
-              </ion-slide>
-           
-
-          <ion-slide class="slide2">
-              <div *ngFor="let a of fetching3;let i of index;" class="main">
-              <!-- <ion-card> -->
-                  <!-- <img class="image" src="{{i.img}}"/> -->
-                  <ion-card (click)="viewMore(i)">
-                    <img src="{{i.img}}"/>
-                    <!-- <div class="card-title">{{i.eventName}}</div>
-                    <div class="card-subtitle">{{a.location}}</div> -->
-                  </ion-card>
-                  <!-- <ion-card-content>
-                    <p style="color: black; font-weight: 500; padding-left:10px">Color Fest</p>
-                  <div align="left">
-                  <p style="padding-left:10px"><ion-icon class="icon" name="pin"></ion-icon>&emsp;Braamfontein, No.1 Fox Str</p>
-                  </div>
-                   <p style="padding-left:10px"><ion-icon name="md-clock"></ion-icon>&emsp;31 Dec 2018 - 2 PM</p>
-                  </ion-card-content> -->
-                <!-- </ion-card> -->
-                </div>
-          </ion-slide>
-        
-          <ion-slide class="slide3">
-              <div *ngFor="let a of fetching4;let i of index;" class="main">
-             
-                  <ion-card (click)="viewMore(i)">
-                      <img src="{{i.img}}"/>
-                      <!-- <div class="card-title">{{i.eventName}}</div>
-                      <div class="card-subtitle">{{a.location}}</div> -->
-                    </ion-card>
-             
-                <!-- <ion-card>
-                  <img src="{{i.img}}"/>
-                   -->
-                  <!-- <ion-card-content>
-                    <p style="color: black; font-weight: 500; padding-left: 10px">Color Fest</p>
-                  <div align="left">
-                  <p style="padding-left:10px"><ion-icon class="icon" name="pin"></ion-icon>&emsp;Braamfontein, No.1 Fox Str</p>
-                  </div>
-                   <p style="padding-left:10px"><ion-icon name="md-clock"></ion-icon>&emsp;31 Dec 2018 - 2 PM</p>
-                  </ion-card-content> -->
-                <!-- </ion-card> -->
-              </div>
-          </ion-slide>
-
-
-          <ion-slide class="slide4" >
-              <div *ngFor="let a of fetching5;let i of index;" class="main">
-                    
-                  <ion-card (click)="viewMore(i)">
-                      <img src="{{i.img}}"/>
-                      <!-- <div class="card-title">{{i.eventName}}</div>
-                      <div class="card-subtitle">{{a.location}}</div> -->
-                    </ion-card>
-              <!-- <ion-card>
-                  <img class="image" src="{{i.img}}"/> -->
-                  <!-- <ion-card-content>
-                  <p style="color: black; font-weight: 500; padding-left: 10px">Color Fest</p>
-                  <div align="left">
-                  <p style="padding-left:10px"><ion-icon class="icon" name="pin"></ion-icon>&emsp;Braamfontein, No.1 Fox Str</p>
-                  </div>
-                   <p style="padding-left:10px"><ion-icon name="md-clock"></ion-icon>&emsp;31 Dec 2018 - 2 PM</p>
-                 </ion-card-content> -->
-                <!-- </ion-card> -->
-              </div>
-              </ion-slide>
-        </ion-slides>
-     
-
-      
-        <h1>Near you</h1>
-        <h2 class="h2">View all</h2>
-        <ion-slides class="main" loop="true">
-            <ion-slide class="slide1">
-                <ion-card>
-                    <img class="image" src="../../assets/imgs/iceeeee.jpg"/>
-                    <ion-card-content>
-                      <p style="color: black; font-weight: 500; padding-left: 10px">Color Fest</p>
-                      <div align="left">
-                      <p style="padding-left:10px"><ion-icon class="icon" name="pin"></ion-icon>&emsp;Braamfontein, No.1 Fox Str</p>
-                      </div>
-                       <p style="padding-left:10px"><ion-icon name="md-clock"></ion-icon>&emsp;31 Dec 2018 - 2 PM</p>
-                    </ion-card-content>
-                  </ion-card>
-                </ion-slide>
+            </ion-card-content> -->
+          </ion-card>
+        </ion-slide>
+      </div>
+    </ion-slides>
   
-            <ion-slide>
-                <ion-card class="slide2">
-                    <img class="image" src="../../assets/imgs/rib.jpg"/>
-                    <ion-card-content>
-                      <p style="color: black; font-weight: 500; padding-left: 10px">Color Fest</p>
-                  <div align="left">
-                  <p style="padding-left:10px"><ion-icon class="icon" name="pin"></ion-icon>&emsp;Braamfontein, No.1 Fox Str</p>
-                  </div>
-                   <p style="padding-left:10px"><ion-icon name="md-clock"></ion-icon>&emsp;31 Dec 2018 - 2 PM</p>
-                    </ion-card-content>
-                  </ion-card>
-            </ion-slide>
-          
-            <ion-slide class="slide3">
-                <ion-card>
-                    <img class="image" src="../../assets/imgs/eventpic.jpg"/>
-                    <ion-card-content>
-                      <p style="color: black; font-weight: 500; padding-left: 10px">Color Fest</p>
-                  <div align="left">
-                  <p style="padding-left:10px"><ion-icon class="icon" name="pin"></ion-icon>&emsp;Braamfontein, No.1 Fox Str</p>
-                  </div>
-                   <p style="padding-left:10px"><ion-icon name="md-clock"></ion-icon>&emsp;31 Dec 2018 - 2 PM</p>
-                    </ion-card-content>
-                  </ion-card>
-            </ion-slide>
-          </ion-slides>
-   
-          
-   </ion-content>
-
-
+    <!-- <div class="scrollcontainer2">
+        <div class="cardcontainer" *ngFor="let a of fetchingRecentlyAdded;let i of index;">
+      
+            <img class="image" src="{{a.img}}" (click)="viewMore(i)">
+       
+        </div>
+      </div> -->
+</ion-content>

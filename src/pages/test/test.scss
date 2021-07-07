@@ -1,0 +1,48 @@
+page-test {
+    .contents{
+        background: red;
+        height: 30rem;
+        .navrow{
+            display: flex;
+            flex-flow: row nowrap;
+            justify-content: space-between;
+        }
+        .headings{
+            text-transform: capitalize;
+            .heading{
+                letter-spacing: .1em;
+                font-size: 2.3em;
+            }
+        }
+    }
+
+    .menu{
+        background: blue;
+        height: 4em;
+        display: flex;
+        flex-flow: row nowrap;
+        justify-content: space-between;
+        box-shadow: 2px 5px 6px rgba(grey, .6);
+        border-bottom-left-radius: .5em;
+        border-bottom-right-radius: .5em;
+        img{
+            height: 7em;
+            width: 7em;
+            border-radius: 50%;
+            border: 3px solid white;
+            position: relative;
+            left: 1em;
+            top: .6em;
+            box-shadow: 2px 5px 6px rgba(grey, .6);
+        }
+
+        ion-icon{
+            display: block;
+            padding: 1em;
+            &:last-child{
+                margin-right: 1em;
+            }
+        }
+
+    }
+}

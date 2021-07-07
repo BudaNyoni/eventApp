@@ -1,54 +1,63 @@
 <ion-header>
 
+
   <div class="thenav">
 
-    <ion-navbar color="trans" align="center" > 
-        <div class="B">
-            <button style="color: white" ion-button icon-only clear (click)="presentModal()">
-              <ion-icon name="md-create"></ion-icon>
+    <ion-navbar color="trans"  > 
+        <!-- <div class="B">
+            <button style="color: white" ion-button icon-only clear item-end  (click)="Log($event)" >
+                   <ion-icon class="more" name="md-more"></ion-icon>
             </button>
           </div>
+          <div class="B2">
+              <ion-icon class="back" name="md-create"(click) = "presentModal()" ></ion-icon>
+        </div> -->
+
+        <button ion-button clear fixed>
+          <ion-icon class="back" name="md-create" (click)="presentModal()" ></ion-icon>
+       </button>
+        <!-- <div align="right"> -->
+            <button ion-button clear fixed class="butt" (click)="Log($event)">
+                <ion-icon class="more" name="md-more" ></ion-icon>
+           </button>
     </ion-navbar>
+
 
 
 
     <div *ngFor="let i of profile" class="phot" align="center">
       <ion-avatar>
-        <img class="pic1" src='{{i.img}}'>
+        <img class="image" src='{{i.img}}' imageViewer>
       </ion-avatar>
       <br>
-      <br>
-      <h1>{{i.username}}</h1>
+      <h1>{{i.username}} <br>{{i.email}}</h1>
     </div>
-
-   
   </div>
 </ion-header>
-
 <br>
 
-
-<ion-content padding>
+<ion-content >
  
     
       <ion-title class="titles">Events to attend</ion-title>
-      <div align="center">
+      <h2 class="message">{{message}}</h2>
+      <div align="center" >
           <ion-grid>
             <ion-row>
-              <ion-col class="space">
-                <img class="pic" src='../../assets/imgs/club_.jpg'>
+              <ion-col class="space" *ngFor="let i of fetching; let a = index" >
+                <img class="pic" src="{{i.img}}" (click)="more(a)">
               </ion-col>
-              <ion-col class="space">
+              <!-- <ion-col class="space">
                 <img class="pic" src='../../assets/imgs/arts.jpg'>
-              </ion-col>
-              <ion-col class="space">
+              </ion-col> -->
+              <!-- <ion-col class="space">
                 <img class="pic" src='../../assets/imgs/IMG-20181002-WA0011.jpg'>
-              </ion-col>
+              </ion-col> -->
             </ion-row>
           </ion-grid>
       <br>
       <br>
-          <ion-grid>
+          <!-- <ion-grid>
             <ion-row>
               <ion-col class="space">
                 <img class="pic" src='../../assets/imgs/Spring-Fi.jpg'>
@@ -60,16 +69,15 @@
                 <img class="pic" src='../../assets/imgs/club_.jpg'>
               </ion-col>
             </ion-row>
-          </ion-grid>
+          </ion-grid> -->
         </div>
-    
+<!--     
         <ion-fab class="fabi" right end fixed>
             <button class="faba" ion-fab color="nav" ><ion-icon class="if" name="arrow-dropleft"></ion-icon></button>
             <ion-fab-list side="left" >
               <button  color="dark" ion-fab><ion-icon name="md-log-out" (click)="logOut()"></ion-icon></button>
             </ion-fab-list>
-          </ion-fab>
-
-</ion-content>
+          </ion-fab> -->
 
 
+        </ion-content>

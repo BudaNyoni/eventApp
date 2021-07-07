@@ -1,54 +1,74 @@
 page-contact {
-
     .B{ 
         position: relative;
-
         top: 150%;
-        margin-left: 85%;
-
+        margin-left: 90%;
     }
-
-    .more{
+    .B2{
         position: relative;
-        top: 30%;
-        right: 70%;
+        margin-bottom: 130%;
+
+        margin-right: 80%;
+   
+    }
+    .back{
+        font-size: 200%;
+        color:whitesmoke;
+        top:4px;
+        margin-left: 10px;
+        position: relative;
+        
+    }
+    .butt{
+        float: left;
+        margin-left: 88%;
+        bottom: 49px;
+        // position: relative;
+    }
+    .more{
+        font-size: 250%;
+        color:whitesmoke;
+      
+    }
+    h2{
+        text-align: center;
+        font-weight: 100;
+        color: grey;
+        font-size: 2.1em;
     }
 
-    // .phot{
-    //     background-image: url('../../assets/imgs/color.jpg');
-    //     background-size: cover;
-    //     position: relative;
-    //   bottom: 65px ;
-    // }
     .pic1{
         height: 130px;
         width: 130px;
         border-radius: 70px;
          position: relative;
          margin-top: 70px;
-
     .phot{
-        background-image: url('../../assets/imgs/eventpic.jpg');
+        // background-image: url('../../assets/imgs/eventpic.jpg');
         background-size: cover;
         position: relative;
-      bottom: 65px ;
+    //   margin-top: 20px ;
     }
-    .pic1{
-        height: 130px;
-        width: 130px;
-        border-radius: 70px;
-         position: relative;
-         margin-top: 70px;
 
-    }
+    // .pic1{
+    //     height: 30vh;
+    //     width: 45%;
+    //     border-radius: 70px;
+    //      position: relative;
+    //      margin-top: 70px;
+    // }
+      
     .pic{
-    height: 130px;
-    width: 130px;
-    position: relative;
-    top: 30px;
 
+    height: 30vh;
+    width: 80%;
+
+    top: 30px;
     }
-            // border: solid 3px rgb(255, 255, 255);
+
+      .pics{
+          border: 2px solid blue;
+      } 
 .dash{
     background-color: rgba(53, 52, 52, 0.555);
     color: white;
@@ -58,27 +78,18 @@ page-contact {
     // bottom: 40px;
 }
 .space{
-    height: 100px;
+    height: 30vh;
     position: relative;
     bottom: 4px;
     font-size: 15px;
     font-weight: 100;
 }
-
 .con{
     height: 10px;
     width: 10px;
     bottom: 10px;
     color: white;
 }
-
-}
-.space{
-    height: 100px;
-    position: relative;
-    bottom: 4px;
-    font-size: 15px;
-    font-weight: 100;
 }
 
 .picture{
@@ -88,28 +99,30 @@ page-contact {
     bottom: 6px;
     border-radius: 100px;
     border: solid 10px #cec2ce81,
-
 }
 h1{
     color: white;
     font-weight: 100;
     position: relative;
-    bottom: 30px;
-
+    bottom: 45px;
 }
-
 .thenav{
-    background-image:linear-gradient(rgba(0, 0, 0, 0.014),#7a4579), url('../../assets/imgs/people.jpg');
-    // background-attachment: fixed;
-    // // background-size: cover;
-    // background-repeat: no-repeat;
-    // background-position: center;
+    background-image:linear-gradient(rgba(0, 0, 0, 0.808),#7a4579), url('../../assets/imgs/people.jpg');
+   
     height: 320px;
 }
-
 .titles{
     font-size: 4em;
+    margin-top: 10px;
 }
+.image{
+    height: 140px;
+    width: 140px;
+    position: relative;
+    bottom: 15px;
+    border-radius: 100px;
+    border: solid 10px #cec2ce81,
 
+}
 
 }

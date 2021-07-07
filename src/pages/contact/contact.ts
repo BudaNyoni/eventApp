@@ -4,6 +4,11 @@ import { FirebaseConnectionProvider } from '../../providers/firebase-connection/
 import { TabsPage } from '../tabs/tabs';
 import { LoginPage } from '../login/login';
 import { ProfileUpdatePage } from '../profile-update/profile-update';
+import { PopoverController } from 'ionic-angular';
+
+// import { PopoverComponent } from '../../components/popover/popover';
+import { MoreInfoPage } from '../more-info/more-info';
+import { PopOver2Component } from '../../components/pop-over2/pop-over2';
 
 
 
@@ -13,49 +18,59 @@ import { ProfileUpdatePage } from '../profile-update/profile-update';
 })
 export class ContactPage {
   profile = [];
+  pic;
+  username;
+  message;
+  email;
+  
+  fetching = new Array();
 
-  constructor(public navCtrl: NavController,private firebaseService: FirebaseConnectionProvider, private alertCtrl : AlertController,public modalCtrl:ModalController) {
+  constructor(public popoverCtrl: PopoverController,public navCtrl: NavController,private firebaseService: FirebaseConnectionProvider, private alertCtrl : AlertController,public modalCtrl:ModalController) {
 
+  }
+  ionViewDidEnter(){
+    this.fetching.length = 0;
+    this.profile.length = 0;
+    this.ionViewDidLoad()
   }
 
   ionViewDidLoad(){
+    this.profile.length = 0;
+    this.message = "";
     this.firebaseService.getProfile().then((data:any)=>{
       this.profile = data;
+      this.pic = this.profile[0].img
+      this.username = this.profile[0].Username;
     })
+    this.fetching.length = 0;
+    this.firebaseService.getALlGoings().then((data:any) => {
+      if (data != "no data"){
+        this.fetching = data;
+      }
+      else{
+        this.message = "You currently do not have any events to attend"
+      }
+    }, Error =>{
+     console.log(Error)
+
+    });
   }
 
   presentModal(){
-    const modal =this.modalCtrl.create(ProfileUpdatePage);
-    modal.present();
+   this.navCtrl.push(ProfileUpdatePage);
   }
 
 
-  logOut(){
-
-    const confirm = this.alertCtrl.create({
-      title: 'LOGGING OUT!',
-      message: 'Are you sure you want to log out?',
-      buttons: [
-        {
-          text: 'Disagree',
-          handler: () => {
-            console.log('Disagree clicked');
-            this.navCtrl.push(TabsPage);
-          }
-        },
-        {
-          text: 'Agree',
-          handler: () => {
-            console.log('Agree clicked');
-            this.firebaseService.logout();
-            this.navCtrl.push(LoginPage)
-          }
-        }
-      ]
+  Log(event) {
+    const popover = this.popoverCtrl.create(PopOver2Component);
+    popover.present({
+       ev:event
     });
-    confirm.present();
    
   }
 
+   more(a){
+    this.navCtrl.push(MoreInfoPage, {events:this.fetching[a], color:true});
+  }
 
 }

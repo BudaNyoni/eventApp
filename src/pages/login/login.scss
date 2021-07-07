@@ -27,6 +27,7 @@ page-login {
         color: white;
         position: relative;
         top: 90px;
+        text-shadow: 2px 3px 4px black;
 
     }
 
@@ -57,7 +58,7 @@ page-login {
 // }
 .image{
     position: relative;
-    top: 130px;
+    top: 100px;
 }
 
 
@@ -68,16 +69,68 @@ h1{
     // position: relative;
     // top: 100px;
     font-size: 4em;
-    padding-top: 4%;
+    padding-top: 10%;
 
 
+}
+.butts{
+    bottom: 25px;
 }
 
 p{
     color: white;
     text-align: center;
-    padding-top: 29%;
+    padding-top: 20%;
 }
+.logos{
+    height: 100px;
+    position: relative;
+    width: 100px;
+    border-radius: 20px;
+}
+
+// splash screen
+.flb {
+    background-image:linear-gradient(#7a4579,rgba(0,0,0,0.5)), url('../../assets/imgs/people.jpg');    background-size: cover;
+    height:100%;
+    width:100%;
+    animation: pulse 2s linear forwards;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  .Aligner-item {
+    max-width: 50%;
+  }
+  .Aligner-item--top {
+    align-self: flex-start;
+  }
+  .Aligner-item--bottom {
+    align-self: flex-end;
+  }
+  #custom-overlay {
+    position: fixed;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    z-index: 100000;
+    width:100%;
+    background-color: #002a3e;
+  }
+  #custom-overlay img {
+    display: block;
+    margin: 0 auto;
+    width: 50%;
+    height: auto;
+    animation: animation 4100ms linear infinite both ;
+    animation-delay: 6s;
+  }
+  #main{
+    background: linear-gradient(rgba(0, 0, 0, 0.432)), url('../../assets/3f6b0af2345776f5f225a3f030e88726.jpg');
+    background-size: cover;
+  
+  }
 
 
 }

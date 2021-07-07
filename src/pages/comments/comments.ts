@@ -2,12 +2,6 @@ import { Component } from '@angular/core';
 import { IonicPage, NavController, NavParams } from 'ionic-angular';
 import { FirebaseConnectionProvider } from '../../providers/firebase-connection/firebase-connection';
 
-/**
-* Generated class for the CommentsPage page.
-*
-* See https://ionicframework.com/docs/components/#navigation for more info on
-* Ionic pages and navigation.
-*/
 
 
 @IonicPage()
@@ -27,8 +21,8 @@ newmessage;
  ionViewDidLoad() {
    this.firebaseService.getComments(this.eventArray[0].key).then((data:any) =>{
      this.comments = data;
+     console.log(this.comments)
      var length = this.comments.length;
-     console.log(this.eventArray[0].comments)
    })
 }
 
